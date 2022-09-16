@@ -1,0 +1,50 @@
+﻿2022-05-12 20:52:18.876 - ShareX starting.
+2022-05-12 20:52:18.879 - Version: 13.7 Portable
+2022-05-12 20:52:18.879 - Build: Release
+2022-05-12 20:52:18.879 - Command line: "C:\Users\zou\OneDrive\Project\Self\EfficientMachine\Client\EfficientMachine\EfficientMachine\Resources\Tools\Program\ShareX\sharex-13.7.0-portable\ShareX.exe" 
+2022-05-12 20:52:18.880 - Personal path: C:\Users\zou\OneDrive\Project\Self\EfficientMachine\Client\EfficientMachine\EfficientMachine\Resources\Tools\Program\ShareX\sharex-13.7.0-portable\ShareX
+2022-05-12 20:52:18.880 - Personal path detection method: Portable file (C:\Users\zou\OneDrive\Project\Self\EfficientMachine\Client\EfficientMachine\EfficientMachine\Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Portable)
+2022-05-12 20:52:18.880 - Operating system: Windows 10 Pro (64-bit)
+2022-05-12 20:52:18.880 - Running as elevated process: False
+2022-05-12 20:52:18.889 - Flags: Portable
+2022-05-12 20:52:18.904 - ApplicationConfig file does not exist: C:\Users\zou\OneDrive\Project\Self\EfficientMachine\Client\EfficientMachine\EfficientMachine\Resources\Tools\Program\ShareX\sharex-13.7.0-portable\ShareX\ApplicationConfig.json
+2022-05-12 20:52:18.905 - ApplicationConfig file does not exist: C:\Users\zou\OneDrive\Project\Self\EfficientMachine\Client\EfficientMachine\EfficientMachine\Resources\Tools\Program\ShareX\sharex-13.7.0-portable\ShareX\ApplicationConfig.json.temp
+2022-05-12 20:52:18.905 - ApplicationConfig file does not exist: C:\Users\zou\OneDrive\Project\Self\EfficientMachine\Client\EfficientMachine\EfficientMachine\Resources\Tools\Program\ShareX\sharex-13.7.0-portable\ShareX\Backup\ApplicationConfig.json
+2022-05-12 20:52:18.905 - Loading new ApplicationConfig instance.
+2022-05-12 20:52:18.992 - UploadersConfig file does not exist: C:\Users\zou\OneDrive\Project\Self\EfficientMachine\Client\EfficientMachine\EfficientMachine\Resources\Tools\Program\ShareX\sharex-13.7.0-portable\ShareX\UploadersConfig.json
+2022-05-12 20:52:18.992 - MainForm init started.
+2022-05-12 20:52:18.992 - UploadersConfig file does not exist: C:\Users\zou\OneDrive\Project\Self\EfficientMachine\Client\EfficientMachine\EfficientMachine\Resources\Tools\Program\ShareX\sharex-13.7.0-portable\ShareX\UploadersConfig.json.temp
+2022-05-12 20:52:18.992 - UploadersConfig file does not exist: C:\Users\zou\OneDrive\Project\Self\EfficientMachine\Client\EfficientMachine\EfficientMachine\Resources\Tools\Program\ShareX\sharex-13.7.0-portable\ShareX\Backup\UploadersConfig.json
+2022-05-12 20:52:18.992 - Loading new UploadersConfig instance.
+2022-05-12 20:52:19.015 - HotkeysConfig file does not exist: C:\Users\zou\OneDrive\Project\Self\EfficientMachine\Client\EfficientMachine\EfficientMachine\Resources\Tools\Program\ShareX\sharex-13.7.0-portable\ShareX\HotkeysConfig.json
+2022-05-12 20:52:19.015 - HotkeysConfig file does not exist: C:\Users\zou\OneDrive\Project\Self\EfficientMachine\Client\EfficientMachine\EfficientMachine\Resources\Tools\Program\ShareX\sharex-13.7.0-portable\ShareX\HotkeysConfig.json.temp
+2022-05-12 20:52:19.016 - HotkeysConfig file does not exist: C:\Users\zou\OneDrive\Project\Self\EfficientMachine\Client\EfficientMachine\EfficientMachine\Resources\Tools\Program\ShareX\sharex-13.7.0-portable\ShareX\Backup\HotkeysConfig.json
+2022-05-12 20:52:19.016 - Loading new HotkeysConfig instance.
+2022-05-12 20:52:19.410 - MainForm init finished.
+2022-05-12 20:52:19.615 - Startup time: 783 ms
+2022-05-12 20:52:19.639 - Hotkey registered: Hotkey: Ctrl + Print Screen, Description: Capture region, Job: RectangleRegion
+2022-05-12 20:52:19.640 - Hotkey registered: Hotkey: Print Screen, Description: Capture entire screen, Job: PrintScreen
+2022-05-12 20:52:19.640 - Hotkey registered: Hotkey: Alt + Print Screen, Description: Capture active window, Job: ActiveWindow
+2022-05-12 20:52:19.640 - Hotkey registered: Hotkey: Shift + Print Screen, Description: Start/Stop screen recording, Job: ScreenRecorder
+2022-05-12 20:52:19.640 - Unable to register hotkey: Ctrl + Shift + Print Screen
+2022-05-12 20:52:19.640 - Hotkey register failed: Hotkey: Ctrl + Shift + Print Screen, Description: Start/Stop screen recording (GIF), Job: ScreenRecorderGIF
+2022-05-12 20:52:22.877 - HotkeyManager started.
+2022-05-12 20:52:22.879 - WatchFolderManager started.
+2022-05-12 20:52:25.252 - ApplicationConfig save started: C:\Users\zou\OneDrive\Project\Self\EfficientMachine\Client\EfficientMachine\EfficientMachine\Resources\Tools\Program\ShareX\sharex-13.7.0-portable\ShareX\ApplicationConfig.json
+2022-05-12 20:52:25.252 - UploadersConfig save started: C:\Users\zou\OneDrive\Project\Self\EfficientMachine\Client\EfficientMachine\EfficientMachine\Resources\Tools\Program\ShareX\sharex-13.7.0-portable\ShareX\UploadersConfig.json
+2022-05-12 20:52:25.253 - HotkeysConfig save started: C:\Users\zou\OneDrive\Project\Self\EfficientMachine\Client\EfficientMachine\EfficientMachine\Resources\Tools\Program\ShareX\sharex-13.7.0-portable\ShareX\HotkeysConfig.json
+2022-05-12 20:52:25.364 - UploadersConfig save successful: C:\Users\zou\OneDrive\Project\Self\EfficientMachine\Client\EfficientMachine\EfficientMachine\Resources\Tools\Program\ShareX\sharex-13.7.0-portable\ShareX\UploadersConfig.json
+2022-05-12 20:52:25.395 - HotkeysConfig save successful: C:\Users\zou\OneDrive\Project\Self\EfficientMachine\Client\EfficientMachine\EfficientMachine\Resources\Tools\Program\ShareX\sharex-13.7.0-portable\ShareX\HotkeysConfig.json
+2022-05-12 20:52:25.443 - ApplicationConfig save successful: C:\Users\zou\OneDrive\Project\Self\EfficientMachine\Client\EfficientMachine\EfficientMachine\Resources\Tools\Program\ShareX\sharex-13.7.0-portable\ShareX\ApplicationConfig.json
+2022-05-12 21:04:37.025 - Hotkey unregistered: Hotkey: Ctrl + Print Screen, Description: Capture region, Job: RectangleRegion
+2022-05-12 21:04:37.026 - Hotkey unregistered: Hotkey: Print Screen, Description: Capture entire screen, Job: PrintScreen
+2022-05-12 21:04:37.026 - Hotkey unregistered: Hotkey: Alt + Print Screen, Description: Capture active window, Job: ActiveWindow
+2022-05-12 21:04:37.026 - Hotkey unregistered: Hotkey: Shift + Print Screen, Description: Start/Stop screen recording, Job: ScreenRecorder
+2022-05-12 21:04:37.076 - ShareX closing.
+2022-05-12 21:04:37.088 - ApplicationConfig save started: C:\Users\zou\OneDrive\Project\Self\EfficientMachine\Client\EfficientMachine\EfficientMachine\Resources\Tools\Program\ShareX\sharex-13.7.0-portable\ShareX\ApplicationConfig.json
+2022-05-12 21:04:37.205 - ApplicationConfig save successful: C:\Users\zou\OneDrive\Project\Self\EfficientMachine\Client\EfficientMachine\EfficientMachine\Resources\Tools\Program\ShareX\sharex-13.7.0-portable\ShareX\ApplicationConfig.json
+2022-05-12 21:04:37.206 - UploadersConfig save started: C:\Users\zou\OneDrive\Project\Self\EfficientMachine\Client\EfficientMachine\EfficientMachine\Resources\Tools\Program\ShareX\sharex-13.7.0-portable\ShareX\UploadersConfig.json
+2022-05-12 21:04:37.277 - UploadersConfig save successful: C:\Users\zou\OneDrive\Project\Self\EfficientMachine\Client\EfficientMachine\EfficientMachine\Resources\Tools\Program\ShareX\sharex-13.7.0-portable\ShareX\UploadersConfig.json
+2022-05-12 21:04:37.278 - HotkeysConfig save started: C:\Users\zou\OneDrive\Project\Self\EfficientMachine\Client\EfficientMachine\EfficientMachine\Resources\Tools\Program\ShareX\sharex-13.7.0-portable\ShareX\HotkeysConfig.json
+2022-05-12 21:04:37.369 - HotkeysConfig save successful: C:\Users\zou\OneDrive\Project\Self\EfficientMachine\Client\EfficientMachine\EfficientMachine\Resources\Tools\Program\ShareX\sharex-13.7.0-portable\ShareX\HotkeysConfig.json
+2022-05-12 21:04:37.371 - ShareX closed.

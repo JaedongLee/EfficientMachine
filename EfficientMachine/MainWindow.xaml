@@ -1,0 +1,73 @@
+﻿<Window x:Class="EfficientMachine.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Background="{DynamicResource MaterialDesignPaper}"
+        Title="EfficientMachine" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="591*"/>
+            <ColumnDefinition Width="209*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Grid.ColumnSpan="2">
+            <ListBox
+                SelectionChanged="ListBox_OnSelectionChanged"
+                Style="{StaticResource MaterialDesignFilterChipPrimaryOutlineListBox}">
+                <ListBoxItem
+                    Content="复制粘贴" />
+                <ListBoxItem
+                    Content="快速搜索" />
+                <ListBoxItem
+                    Content="系统/空间清理" />
+                <ListBoxItem
+                    Content="系统/BingToGoogle" />
+                <ListBoxItem
+                    Content="系统/烧录" />
+                <ListBoxItem
+                    Content="系统/ARK" />
+                <ListBoxItem
+                    Content="系统/监控" />
+                <ListBoxItem
+                    Content="阅读/PDF" />
+                <ListBoxItem
+                    Content="阅读/电子书" />
+                <ListBoxItem
+                    Content="屏幕/截图" />
+                <ListBoxItem
+                    Content="屏幕/录制" />
+                <ListBoxItem
+                    Content="下载" />
+                <ListBoxItem
+                    Content="笔记" />
+                <ListBoxItem
+                    Content="待办" />
+                <ListBoxItem
+                    Content="VPN" />
+                <ListBoxItem
+                    Content="快捷键" />
+                <ListBoxItem
+                    Content="Office/管理" />
+                <ListBoxItem
+                    Content="Java/RemoteDebug" />
+                <ListBoxItem
+                    Content="美化" />
+            </ListBox>
+        </StackPanel>
+        <ScrollViewer
+            Grid.Row="1"
+            VerticalScrollBarVisibility="Auto" Height="300" Grid.ColumnSpan="2" Margin="0,0,0,40" Grid.RowSpan="2">
+            <WrapPanel x:Name="ToolsPanel" />
+        </ScrollViewer>
+    </Grid>
+</Window>

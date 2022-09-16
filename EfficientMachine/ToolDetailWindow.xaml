@@ -1,0 +1,94 @@
+﻿<Window x:Class="EfficientMachine.ToolDetailWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EfficientMachine"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Background="{DynamicResource MaterialDesignPaper}"
+        Title="EfficientMachine" Height="450" Width="260">
+    <Grid>
+        <materialDesign:Card
+            Margin="8"
+            Width="200"
+            Foreground="#e6e6e6">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition
+                        Height="140" />
+                    <RowDefinition
+                        Height="*" />
+                    <RowDefinition
+                        Height="*" />
+                    <RowDefinition
+                        Height="*" />
+                    <RowDefinition
+                        Height="*" />
+                </Grid.RowDefinitions>
+                <Image Name="ToolImage"
+                    Height="140"
+                    Width="196"
+                    Margin="0,10,0,0"
+                    Stretch="Uniform" />
+                <Button
+                    Name="StartButton"
+                    Grid.Row="0"
+                    Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Bottom"
+                    Click="StartButton_OnClick"
+                    Margin="0 0 16 -20">
+                </Button>
+                <StackPanel
+                    Grid.Row="1"
+                    Margin="8 24 8 0">
+                    <TextBlock
+                        FontWeight="Bold">
+                        名称:
+                    </TextBlock>
+                    <TextBlock
+                        Name="NameTextBlock"
+                        TextWrapping="Wrap"
+                        VerticalAlignment="Center"/>
+                </StackPanel>
+                <StackPanel
+                    Grid.Row="2"
+                    Margin="8 24 8 0">
+                    <TextBlock
+                        FontWeight="Bold">
+                        运行环境:
+                    </TextBlock>
+                    <TextBlock
+                        Name="RuntimeEnvironmentTextBlock"
+                        TextWrapping="Wrap"
+                        VerticalAlignment="Center"/>
+                </StackPanel>
+                <StackPanel
+                    Grid.Row="3"
+                    Margin="8 24 8 0">
+                    <TextBlock
+                        FontWeight="Bold">
+                        发布类型:
+                    </TextBlock>
+                    <TextBlock
+                        Name="ReleaseTypeTextBlock"
+                        TextWrapping="Wrap"
+                        VerticalAlignment="Center"/>
+                </StackPanel>
+                <StackPanel
+                    Grid.Row="4"
+                    Margin="8 24 8 0">
+                    <TextBlock
+                        FontWeight="Bold">
+                        描述:
+                    </TextBlock>
+                    <TextBlock
+                        Name="DescriptionTextBlock"
+                        TextWrapping="Wrap"
+                        VerticalAlignment="Center"/>
+                </StackPanel>
+            </Grid>
+        </materialDesign:Card>
+    </Grid>
+</Window>

@@ -1,0 +1,6 @@
+./EfficientMachine.sln.DotSettings.user
+./packages
+./.vs
+./.idea
+./EfficientMachine/bin
+./EfficientMachine/obj

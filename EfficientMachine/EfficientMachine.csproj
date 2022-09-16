@@ -1,0 +1,1164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CD1C5260-A8CB-483E-89B9-D553958AF23F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>EfficientMachine</RootNamespace>
+    <AssemblyName>EfficientMachine</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>E:\tmp\myapp\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>logo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ControlzEx, Version=5.0.0.0, Culture=neutral, PublicKeyToken=69f1c32f803d307e, processorArchitecture=MSIL">
+      <HintPath>..\packages\ControlzEx.5.0.1\lib\net462\ControlzEx.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.AvalonEdit, Version=6.1.3.50, Culture=neutral, PublicKeyToken=9cc39be672370310, processorArchitecture=MSIL">
+      <HintPath>..\packages\AvalonEdit.6.1.3.50\lib\net45\ICSharpCode.AvalonEdit.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.14.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.14\lib\net45\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="MahApps.Metro, Version=2.0.0.0, Culture=neutral, PublicKeyToken=51482d6f650b2b3f, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.2.4.9\lib\net47\MahApps.Metro.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignColors, Version=2.0.6.0, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignColors.2.0.6\lib\net452\MaterialDesignColors.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignThemes.MahApps, Version=0.2.2.0, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignThemes.MahApps.0.2.2\lib\net452\MaterialDesignThemes.MahApps.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignThemes.Wpf, Version=4.5.0.0, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignThemes.4.5.0\lib\net452\MaterialDesignThemes.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Build" />
+    <Reference Include="Microsoft.Build.Framework" />
+    <Reference Include="Microsoft.Build.Tasks.v4.0" />
+    <Reference Include="Microsoft.Build.Utilities.v4.0" />
+    <Reference Include="Microsoft.Xaml.Behaviors, Version=1.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Xaml.Behaviors.Wpf.1.1.39\lib\net45\Microsoft.Xaml.Behaviors.dll</HintPath>
+    </Reference>
+    <Reference Include="ShowMeTheXAML, Version=2.0.0.62, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ShowMeTheXAML.2.0.0\lib\net472\ShowMeTheXAML.dll</HintPath>
+    </Reference>
+    <Reference Include="ShowMeTheXAML.AvalonEdit, Version=2.0.0.62, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ShowMeTheXAML.AvalonEdit.2.0.0\lib\net472\ShowMeTheXAML.AvalonEdit.dll</HintPath>
+    </Reference>
+    <Reference Include="SqlSugar, Version=5.0.7.8, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SqlSugar.5.0.7.8\lib\SqlSugar.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SQLite, Version=1.0.115.5, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.115.5\lib\net46\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="ReleaseType.cs" />
+    <Compile Include="ToolDetailWindow.xaml.cs">
+      <DependentUpon>ToolDetailWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ImageUtil.cs" />
+    <Compile Include="ToolStatus.cs" />
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entity\Tool.cs" />
+    <Compile Include="Entity\ToolTag.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="ToolDetailWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Content Include="Resources\Tools\Program\AutoHotkey\AutoHotkey_1.1.34.01_setup.exe" />
+    <Content Include="Resources\Tools\Program\Calibre\calibre-portable-installer-5.42.0.exe" />
+    <Content Include="Resources\Tools\Program\Ditto\DittoPortable_64bit_3_24_214_0\Ditto\Addins\DittoUtil.dll" />
+    <Content Include="Resources\Tools\Program\Ditto\DittoPortable_64bit_3_24_214_0\Ditto\Ditto.exe" />
+    <Content Include="Resources\Tools\Program\Ditto\DittoPortable_64bit_3_24_214_0\Ditto\ICU_Loader.dll" />
+    <Content Include="Resources\Tools\Program\Ditto\DittoPortable_64bit_3_24_214_0\Ditto\mfc140u.dll" />
+    <Content Include="Resources\Tools\Program\Ditto\DittoPortable_64bit_3_24_214_0\Ditto\msvcp140.dll" />
+    <Content Include="Resources\Tools\Program\Ditto\DittoPortable_64bit_3_24_214_0\Ditto\vcruntime140.dll" />
+    <Content Include="Resources\Tools\Program\Ditto\DittoPortable_64bit_3_24_214_0\Ditto\vcruntime140_1.dll" />
+    <Content Include="Resources\Tools\Program\Free Download Manager\fdm_x64_setup.exe" />
+    <Content Include="Resources\Tools\Program\Gaaiho PDF Reader\GaaihoReader_ENU_ALL_5.40.exe" />
+    <Content Include="Resources\Tools\Program\Joplin\joplinportable.exe" />
+    <Content Include="Resources\Tools\Program\Listary\Listary.exe" />
+    <Content Include="Resources\Tools\Program\MSEdgeRedirect\MSEdgeRedirect.exe" />
+    <Content Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\activate\OSPP.VBS" />
+    <Content Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\activate\OSPPREARM.EXE" />
+    <Resource Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\activate\SLERROR.XML" />
+    <Resource Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\activate\SLERROR_1028.XML" />
+    <Resource Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\activate\SLERROR_2052.XML" />
+    <Content Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\clean\x64\cleanospp.exe" />
+    <Content Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\clean\x64\msvcr100.dll" />
+    <Content Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\clean\x86\cleanospp.exe" />
+    <Content Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\clean\x86\msvcr100.dll" />
+    <Content Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\setup.exe" />
+    <Content Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\Thunder\atl71.dll" />
+    <Content Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\Thunder\dl_peer_id.dll" />
+    <Content Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\Thunder\download_engine.dll" />
+    <Content Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\Thunder\MiniThunderPlatform.exe" />
+    <Content Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\Thunder\msvcp71.dll" />
+    <Content Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\Thunder\msvcr71.dll" />
+    <Content Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\Thunder\xldl.dll" />
+    <Content Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\Thunder\zlib1.dll" />
+    <Content Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\Office Tool Plus.exe" />
+    <Content Include="Resources\Tools\Program\OpenArk\OpenArk64.exe" />
+    <Content Include="Resources\Tools\Program\Process Hacker\processhacker-2.39-bin\x64\peview.exe" />
+    <Content Include="Resources\Tools\Program\Process Hacker\processhacker-2.39-bin\x64\plugins\DotNetTools.dll" />
+    <Content Include="Resources\Tools\Program\Process Hacker\processhacker-2.39-bin\x64\plugins\ExtendedNotifications.dll" />
+    <Content Include="Resources\Tools\Program\Process Hacker\processhacker-2.39-bin\x64\plugins\ExtendedServices.dll" />
+    <Content Include="Resources\Tools\Program\Process Hacker\processhacker-2.39-bin\x64\plugins\ExtendedTools.dll" />
+    <Content Include="Resources\Tools\Program\Process Hacker\processhacker-2.39-bin\x64\plugins\HardwareDevices.dll" />
+    <Content Include="Resources\Tools\Program\Process Hacker\processhacker-2.39-bin\x64\plugins\NetworkTools.dll" />
+    <Content Include="Resources\Tools\Program\Process Hacker\processhacker-2.39-bin\x64\plugins\OnlineChecks.dll" />
+    <Content Include="Resources\Tools\Program\Process Hacker\processhacker-2.39-bin\x64\plugins\SbieSupport.dll" />
+    <Content Include="Resources\Tools\Program\Process Hacker\processhacker-2.39-bin\x64\plugins\ToolStatus.dll" />
+    <Content Include="Resources\Tools\Program\Process Hacker\processhacker-2.39-bin\x64\plugins\Updater.dll" />
+    <Content Include="Resources\Tools\Program\Process Hacker\processhacker-2.39-bin\x64\plugins\UserNotes.dll" />
+    <Content Include="Resources\Tools\Program\Process Hacker\processhacker-2.39-bin\x64\plugins\WindowExplorer.dll" />
+    <Content Include="Resources\Tools\Program\Process Hacker\processhacker-2.39-bin\x64\ProcessHacker.exe" />
+    <Content Include="Resources\Tools\Program\Process Hacker\processhacker-2.39-bin\x86\peview.exe" />
+    <Content Include="Resources\Tools\Program\Process Hacker\processhacker-2.39-bin\x86\plugins\DotNetTools.dll" />
+    <Content Include="Resources\Tools\Program\Process Hacker\processhacker-2.39-bin\x86\plugins\ExtendedNotifications.dll" />
+    <Content Include="Resources\Tools\Program\Process Hacker\processhacker-2.39-bin\x86\plugins\ExtendedServices.dll" />
+    <Content Include="Resources\Tools\Program\Process Hacker\processhacker-2.39-bin\x86\plugins\ExtendedTools.dll" />
+    <Content Include="Resources\Tools\Program\Process Hacker\processhacker-2.39-bin\x86\plugins\HardwareDevices.dll" />
+    <Content Include="Resources\Tools\Program\Process Hacker\processhacker-2.39-bin\x86\plugins\NetworkTools.dll" />
+    <Content Include="Resources\Tools\Program\Process Hacker\processhacker-2.39-bin\x86\plugins\OnlineChecks.dll" />
+    <Content Include="Resources\Tools\Program\Process Hacker\processhacker-2.39-bin\x86\plugins\SbieSupport.dll" />
+    <Content Include="Resources\Tools\Program\Process Hacker\processhacker-2.39-bin\x86\plugins\ToolStatus.dll" />
+    <Content Include="Resources\Tools\Program\Process Hacker\processhacker-2.39-bin\x86\plugins\Updater.dll" />
+    <Content Include="Resources\Tools\Program\Process Hacker\processhacker-2.39-bin\x86\plugins\UserNotes.dll" />
+    <Content Include="Resources\Tools\Program\Process Hacker\processhacker-2.39-bin\x86\plugins\WindowExplorer.dll" />
+    <Content Include="Resources\Tools\Program\Process Hacker\processhacker-2.39-bin\x86\ProcessHacker.exe" />
+    <Content Include="Resources\Tools\Program\Rufus\rufus-3.18.exe" />
+    <Content Include="Resources\Tools\Program\ScreenToGif\screentogif.2.37.portable.x64\ScreenToGif.exe" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\FluentFTP.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\ImageListView.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\de\ShareX.HelpersLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\de\ShareX.HistoryLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\de\ShareX.ImageEffectsLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\de\ShareX.IndexerLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\de\ShareX.MediaLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\de\ShareX.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\de\ShareX.ScreenCaptureLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\de\ShareX.UploadersLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\es-MX\ShareX.HelpersLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\es-MX\ShareX.HistoryLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\es-MX\ShareX.ImageEffectsLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\es-MX\ShareX.IndexerLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\es-MX\ShareX.MediaLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\es-MX\ShareX.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\es-MX\ShareX.ScreenCaptureLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\es-MX\ShareX.UploadersLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\es\ShareX.HelpersLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\es\ShareX.HistoryLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\es\ShareX.ImageEffectsLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\es\ShareX.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\es\ShareX.ScreenCaptureLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\es\ShareX.UploadersLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\fa-IR\ShareX.HelpersLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\fa-IR\ShareX.HistoryLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\fa-IR\ShareX.ImageEffectsLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\fa-IR\ShareX.IndexerLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\fa-IR\ShareX.MediaLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\fa-IR\ShareX.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\fa-IR\ShareX.ScreenCaptureLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\fa-IR\ShareX.UploadersLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\fr\ShareX.HelpersLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\fr\ShareX.HistoryLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\fr\ShareX.ImageEffectsLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\fr\ShareX.IndexerLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\fr\ShareX.MediaLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\fr\ShareX.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\fr\ShareX.ScreenCaptureLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\fr\ShareX.UploadersLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\hu\ShareX.HelpersLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\hu\ShareX.HistoryLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\hu\ShareX.ImageEffectsLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\hu\ShareX.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\hu\ShareX.ScreenCaptureLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\hu\ShareX.UploadersLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\id-ID\ShareX.HelpersLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\id-ID\ShareX.ImageEffectsLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\id-ID\ShareX.MediaLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\id-ID\ShareX.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\id-ID\ShareX.ScreenCaptureLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\id-ID\ShareX.UploadersLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\it-IT\ShareX.HelpersLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\it-IT\ShareX.HistoryLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\it-IT\ShareX.ImageEffectsLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\it-IT\ShareX.MediaLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\it-IT\ShareX.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\it-IT\ShareX.ScreenCaptureLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\it-IT\ShareX.UploadersLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\ja-JP\ShareX.HelpersLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\ja-JP\ShareX.HistoryLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\ja-JP\ShareX.ImageEffectsLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\ja-JP\ShareX.IndexerLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\ja-JP\ShareX.MediaLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\ja-JP\ShareX.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\ja-JP\ShareX.ScreenCaptureLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\ja-JP\ShareX.UploadersLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\ko-KR\ShareX.HelpersLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\ko-KR\ShareX.HistoryLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\ko-KR\ShareX.ImageEffectsLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\ko-KR\ShareX.IndexerLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\ko-KR\ShareX.MediaLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\ko-KR\ShareX.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\ko-KR\ShareX.ScreenCaptureLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\ko-KR\ShareX.UploadersLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\nl-NL\ShareX.HelpersLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\nl-NL\ShareX.HistoryLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\nl-NL\ShareX.ImageEffectsLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\nl-NL\ShareX.MediaLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\nl-NL\ShareX.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\nl-NL\ShareX.ScreenCaptureLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\nl-NL\ShareX.UploadersLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\pt-BR\ShareX.HelpersLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\pt-BR\ShareX.HistoryLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\pt-BR\ShareX.ImageEffectsLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\pt-BR\ShareX.MediaLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\pt-BR\ShareX.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\pt-BR\ShareX.ScreenCaptureLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\pt-BR\ShareX.UploadersLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\pt-PT\ShareX.HelpersLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\pt-PT\ShareX.HistoryLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\pt-PT\ShareX.ImageEffectsLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\pt-PT\ShareX.IndexerLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\pt-PT\ShareX.MediaLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\pt-PT\ShareX.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\pt-PT\ShareX.ScreenCaptureLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\pt-PT\ShareX.UploadersLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\ru\ShareX.HelpersLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\ru\ShareX.HistoryLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\ru\ShareX.ImageEffectsLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\ru\ShareX.IndexerLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\ru\ShareX.MediaLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\ru\ShareX.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\ru\ShareX.ScreenCaptureLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\ru\ShareX.UploadersLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\tr\ShareX.HelpersLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\tr\ShareX.HistoryLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\tr\ShareX.ImageEffectsLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\tr\ShareX.IndexerLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\tr\ShareX.MediaLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\tr\ShareX.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\tr\ShareX.ScreenCaptureLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\tr\ShareX.UploadersLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\uk\ShareX.HelpersLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\uk\ShareX.HistoryLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\uk\ShareX.ImageEffectsLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\uk\ShareX.IndexerLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\uk\ShareX.MediaLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\uk\ShareX.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\uk\ShareX.ScreenCaptureLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\uk\ShareX.UploadersLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\vi-VN\ShareX.HelpersLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\vi-VN\ShareX.HistoryLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\vi-VN\ShareX.ImageEffectsLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\vi-VN\ShareX.IndexerLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\vi-VN\ShareX.MediaLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\vi-VN\ShareX.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\vi-VN\ShareX.ScreenCaptureLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\vi-VN\ShareX.UploadersLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\zh-CN\ShareX.HelpersLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\zh-CN\ShareX.HistoryLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\zh-CN\ShareX.ImageEffectsLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\zh-CN\ShareX.IndexerLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\zh-CN\ShareX.MediaLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\zh-CN\ShareX.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\zh-CN\ShareX.ScreenCaptureLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\zh-CN\ShareX.UploadersLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\zh-TW\ShareX.HelpersLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\zh-TW\ShareX.HistoryLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\zh-TW\ShareX.ImageEffectsLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\zh-TW\ShareX.IndexerLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\zh-TW\ShareX.MediaLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\zh-TW\ShareX.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\zh-TW\ShareX.ScreenCaptureLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Languages\zh-TW\ShareX.UploadersLib.resources.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\MegaApiClient.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Newtonsoft.Json.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Recorder-devices-setup.exe" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Renci.SshNet.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\ShareX.exe" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\ShareX.HelpersLib.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\ShareX.HistoryLib.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\ShareX.ImageEffectsLib.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\ShareX.IndexerLib.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\ShareX.MediaLib.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\ShareX.ScreenCaptureLib.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\ShareX.UploadersLib.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\ShareX_NativeMessagingHost.exe" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\zxing.dll" />
+    <Content Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\zxing.presentation.dll" />
+    <Content Include="Resources\Tools\Program\SpaceSniffer\spacesniffer_1_3_0_2\SpaceSniffer.exe" />
+    <Content Include="Resources\Tools\Program\V2rayN\v2rayn\EnableLoopback.exe" />
+    <Content Include="Resources\Tools\Program\V2rayN\v2rayn\Google.Protobuf.dll" />
+    <Content Include="Resources\Tools\Program\V2rayN\v2rayn\Grpc.Core.Api.dll" />
+    <Content Include="Resources\Tools\Program\V2rayN\v2rayn\Grpc.Core.dll" />
+    <Content Include="Resources\Tools\Program\V2rayN\v2rayn\grpc_csharp_ext.x64.dll" />
+    <Content Include="Resources\Tools\Program\V2rayN\v2rayn\grpc_csharp_ext.x86.dll" />
+    <Content Include="Resources\Tools\Program\V2rayN\v2rayn\log4net.dll" />
+    <Content Include="Resources\Tools\Program\V2rayN\v2rayn\netstandard.dll" />
+    <Content Include="Resources\Tools\Program\V2rayN\v2rayn\Newtonsoft.Json.dll" />
+    <Content Include="Resources\Tools\Program\V2rayN\v2rayn\NHotkey.dll" />
+    <Content Include="Resources\Tools\Program\V2rayN\v2rayn\NHotkey.WindowsForms.dll" />
+    <Content Include="Resources\Tools\Program\V2rayN\v2rayn\System.Buffers.dll" />
+    <Content Include="Resources\Tools\Program\V2rayN\v2rayn\System.Memory.dll" />
+    <Content Include="Resources\Tools\Program\V2rayN\v2rayn\System.Numerics.Vectors.dll" />
+    <Content Include="Resources\Tools\Program\V2rayN\v2rayn\System.Runtime.CompilerServices.Unsafe.dll" />
+    <Content Include="Resources\Tools\Program\V2rayN\v2rayn\v2rayN.exe" />
+    <Content Include="Resources\Tools\Program\V2rayN\v2rayn\v2rayUpgrade.exe" />
+    <Content Include="Resources\Tools\Program\V2rayN\v2rayn\zh-Hans\v2rayN.resources.dll" />
+    <Content Include="Resources\Tools\Program\V2rayN\v2rayn\zxing.dll" />
+    <Content Include="Resources\Tools\Program\V2rayN\v2rayn\zxing.presentation.dll" />
+    <Content Include="Resources\Tools\Program\XMeters\XMetersSetup.exe" />
+    <None Include="Bug.md" />
+    <None Include="Blueprint.md" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Content Include="log4net.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Resources\Tools\Program\arthas idea\arthas-idea-plugin.zip" />
+    <None Include="Resources\Tools\Program\Atom Material Icons\Atom_Material_Icons-64.0.0.zip" />
+    <None Include="Resources\Tools\Program\Ditto\DittoPortable_64bit_3_24_214_0\Ditto\Ditto.db" />
+    <None Include="Resources\Tools\Program\Ditto\DittoPortable_64bit_3_24_214_0\Ditto\Ditto.Settings" />
+    <None Include="Resources\Tools\Program\Ditto\DittoPortable_64bit_3_24_214_0\Ditto\portable" />
+    <None Include="Resources\Tools\Program\Material Theme UI\Material_Theme_UI-7.4.1.zip" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\de-de\settings-access-de.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\de-de\settings-excel-de.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\de-de\settings-office-de.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\de-de\settings-onent-de.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\de-de\settings-outlk-de.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\de-de\settings-ppt-de.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\de-de\settings-proj-de.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\de-de\settings-pub-de.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\de-de\settings-visio-de.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\de-de\settings-word-de.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\en-us\settings-access-en.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\en-us\settings-excel-en.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\en-us\settings-office-en.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\en-us\settings-onent-en.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\en-us\settings-outlk-en.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\en-us\settings-ppt-en.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\en-us\settings-proj-en.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\en-us\settings-pub-en.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\en-us\settings-visio-en.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\en-us\settings-word-en.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\es-es\settings-access-es.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\es-es\settings-excel-es.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\es-es\settings-office-es.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\es-es\settings-onent-es.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\es-es\settings-outlk-es.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\es-es\settings-ppt-es.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\es-es\settings-proj-es.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\es-es\settings-pub-es.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\es-es\settings-visio-es.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\es-es\settings-word-es.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\fr-fr\settings-access-fr.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\fr-fr\settings-excel-fr.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\fr-fr\settings-office-fr.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\fr-fr\settings-onent-fr.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\fr-fr\settings-outlk-fr.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\fr-fr\settings-ppt-fr.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\fr-fr\settings-proj-fr.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\fr-fr\settings-pub-fr.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\fr-fr\settings-visio-fr.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\fr-fr\settings-word-fr.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\it-it\settings-access-it.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\it-it\settings-excel-it.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\it-it\settings-office-it.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\it-it\settings-onent-it.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\it-it\settings-outlk-it.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\it-it\settings-ppt-it.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\it-it\settings-proj-it.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\it-it\settings-pub-it.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\it-it\settings-visio-it.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\it-it\settings-word-it.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\ja-jp\settings-access-ja.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\ja-jp\settings-excel-ja.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\ja-jp\settings-office-ja.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\ja-jp\settings-onent-ja.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\ja-jp\settings-outlk-ja.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\ja-jp\settings-ppt-ja.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\ja-jp\settings-proj-ja.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\ja-jp\settings-pub-ja.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\ja-jp\settings-visio-ja.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\ja-jp\settings-word-ja.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\ko-kr\settings-access-ko.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\ko-kr\settings-excel-ko.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\ko-kr\settings-office-ko.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\ko-kr\settings-onent-ko.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\ko-kr\settings-outlk-ko.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\ko-kr\settings-ppt-ko.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\ko-kr\settings-proj-ko.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\ko-kr\settings-pub-ko.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\ko-kr\settings-visio-ko.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\ko-kr\settings-word-ko.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\nl-nl\settings-access-nl.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\nl-nl\settings-excel-nl.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\nl-nl\settings-office-nl.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\nl-nl\settings-onent-nl.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\nl-nl\settings-outlk-nl.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\nl-nl\settings-ppt-nl.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\nl-nl\settings-proj-nl.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\nl-nl\settings-pub-nl.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\nl-nl\settings-visio-nl.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\nl-nl\settings-word-nl.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\pt-br\settings-access-pt.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\pt-br\settings-excel-pt.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\pt-br\settings-office-pt.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\pt-br\settings-onent-pt.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\pt-br\settings-outlk-pt.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\pt-br\settings-ppt-pt.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\pt-br\settings-proj-pt.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\pt-br\settings-pub-pt.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\pt-br\settings-visio-pt.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\pt-br\settings-word-pt.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\ru-ru\settings-access-ru.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\ru-ru\settings-excel-ru.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\ru-ru\settings-office-ru.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\ru-ru\settings-onent-ru.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\ru-ru\settings-outlk-ru.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\ru-ru\settings-ppt-ru.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\ru-ru\settings-proj-ru.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\ru-ru\settings-pub-ru.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\ru-ru\settings-visio-ru.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\ru-ru\settings-word-ru.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\zh-cn\settings-access-zh-cn.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\zh-cn\settings-excel-zh-cn.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\zh-cn\settings-office-zh-cn.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\zh-cn\settings-onent-zh-cn.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\zh-cn\settings-outlk-zh-cn.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\zh-cn\settings-ppt-zh-cn.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\zh-cn\settings-proj-zh-cn.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\zh-cn\settings-pub-zh-cn.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\zh-cn\settings-visio-zh-cn.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\zh-cn\settings-word-zh-cn.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\zh-tw\settings-access-zh-tw.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\zh-tw\settings-excel-zh-tw.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\zh-tw\settings-office-zh-tw.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\zh-tw\settings-onent-zh-tw.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\zh-tw\settings-outlk-zh-tw.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\zh-tw\settings-ppt-zh-tw.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\zh-tw\settings-proj-zh-tw.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\zh-tw\settings-pub-zh-tw.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\zh-tw\settings-visio-zh-tw.json" />
+    <None Include="Resources\Tools\Program\Office Tool Plus\Office_Tool_v8.3.10.7\Office Tool\files\preferences\zh-tw\settings-word-zh-tw.json" />
+    <None Include="Resources\Tools\Program\Process Hacker\processhacker-2.39-bin\x64\kprocesshacker.sys" />
+    <None Include="Resources\Tools\Program\Process Hacker\processhacker-2.39-bin\x64\ProcessHacker.sig" />
+    <None Include="Resources\Tools\Program\Process Hacker\processhacker-2.39-bin\x86\kprocesshacker.sys" />
+    <None Include="Resources\Tools\Program\Process Hacker\processhacker-2.39-bin\x86\ProcessHacker.sig" />
+    <None Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Portable" />
+    <None Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\ShareX.exe.config" />
+    <None Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\ShareX\ApplicationConfig.json" />
+    <None Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\ShareX\Backup\ApplicationConfig-2022-05-W20.json" />
+    <None Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\ShareX\Backup\ApplicationConfig.json" />
+    <None Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\ShareX\Backup\HotkeysConfig-2022-05-W20.json" />
+    <None Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\ShareX\Backup\HotkeysConfig.json" />
+    <None Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\ShareX\Backup\UploadersConfig-2022-05-W20.json" />
+    <None Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\ShareX\Backup\UploadersConfig.json" />
+    <None Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\ShareX\HotkeysConfig.json" />
+    <None Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\ShareX\UploadersConfig.json" />
+    <None Include="Resources\Tools\Program\SpaceSniffer\spacesniffer_1_3_0_2\SpaceSniffer Quick Start.pdf" />
+    <None Include="Resources\Tools\Program\SpaceSniffer\spacesniffer_1_3_0_2\SpaceSniffer User Manual.pdf" />
+    <Resource Include="logo.ico" />
+    <Content Include="Resources\Tools\Database\EfficientMachine.db">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="Resources\Tools\Program\Ditto\DittoPortable_64bit_3_24_214_0\Ditto\Language\Chinese Traditional.xml" />
+    <Resource Include="Resources\Tools\Program\Ditto\DittoPortable_64bit_3_24_214_0\Ditto\Language\Chinese.xml" />
+    <Resource Include="Resources\Tools\Program\Ditto\DittoPortable_64bit_3_24_214_0\Ditto\Language\Croatian.xml" />
+    <Resource Include="Resources\Tools\Program\Ditto\DittoPortable_64bit_3_24_214_0\Ditto\Language\Czech.xml" />
+    <Resource Include="Resources\Tools\Program\Ditto\DittoPortable_64bit_3_24_214_0\Ditto\Language\Danish.xml" />
+    <Resource Include="Resources\Tools\Program\Ditto\DittoPortable_64bit_3_24_214_0\Ditto\Language\Deutsch.xml" />
+    <Resource Include="Resources\Tools\Program\Ditto\DittoPortable_64bit_3_24_214_0\Ditto\Language\Dutch.xml" />
+    <Resource Include="Resources\Tools\Program\Ditto\DittoPortable_64bit_3_24_214_0\Ditto\Language\English.xml" />
+    <Resource Include="Resources\Tools\Program\Ditto\DittoPortable_64bit_3_24_214_0\Ditto\Language\Finnish.xml" />
+    <Resource Include="Resources\Tools\Program\Ditto\DittoPortable_64bit_3_24_214_0\Ditto\Language\French.xml" />
+    <Resource Include="Resources\Tools\Program\Ditto\DittoPortable_64bit_3_24_214_0\Ditto\Language\Greek.xml" />
+    <Resource Include="Resources\Tools\Program\Ditto\DittoPortable_64bit_3_24_214_0\Ditto\Language\Hebrew.xml" />
+    <Resource Include="Resources\Tools\Program\Ditto\DittoPortable_64bit_3_24_214_0\Ditto\Language\Hungarian.xml" />
+    <Resource Include="Resources\Tools\Program\Ditto\DittoPortable_64bit_3_24_214_0\Ditto\Language\italiano.xml" />
+    <Resource Include="Resources\Tools\Program\Ditto\DittoPortable_64bit_3_24_214_0\Ditto\Language\Japanese.xml" />
+    <Resource Include="Resources\Tools\Program\Ditto\DittoPortable_64bit_3_24_214_0\Ditto\Language\Korean.xml" />
+    <Resource Include="Resources\Tools\Program\Ditto\DittoPortable_64bit_3_24_214_0\Ditto\Language\Persian.xml" />
+    <Resource Include="Resources\Tools\Program\Ditto\DittoPortable_64bit_3_24_214_0\Ditto\Language\Polski.xml" />
+    <Resource Include="Resources\Tools\Program\Ditto\DittoPortable_64bit_3_24_214_0\Ditto\Language\Portuguese.xml" />
+    <Resource Include="Resources\Tools\Program\Ditto\DittoPortable_64bit_3_24_214_0\Ditto\Language\Romanian.xml" />
+    <Resource Include="Resources\Tools\Program\Ditto\DittoPortable_64bit_3_24_214_0\Ditto\Language\Russian.xml" />
+    <Resource Include="Resources\Tools\Program\Ditto\DittoPortable_64bit_3_24_214_0\Ditto\Language\Slovak.xml" />
+    <Resource Include="Resources\Tools\Program\Ditto\DittoPortable_64bit_3_24_214_0\Ditto\Language\Slovenian.xml" />
+    <Resource Include="Resources\Tools\Program\Ditto\DittoPortable_64bit_3_24_214_0\Ditto\Language\Spanish.xml" />
+    <Resource Include="Resources\Tools\Program\Ditto\DittoPortable_64bit_3_24_214_0\Ditto\Language\Swedish.xml" />
+    <Resource Include="Resources\Tools\Program\Ditto\DittoPortable_64bit_3_24_214_0\Ditto\Language\Tamil.xml" />
+    <Resource Include="Resources\Tools\Program\Ditto\DittoPortable_64bit_3_24_214_0\Ditto\Language\Turkish.xml" />
+    <Resource Include="Resources\Tools\Program\Ditto\DittoPortable_64bit_3_24_214_0\Ditto\Language\Ukrainian.xml" />
+    <Resource Include="Resources\Tools\Program\Ditto\DittoPortable_64bit_3_24_214_0\Ditto\Themes\Classic.xml" />
+    <Resource Include="Resources\Tools\Program\Ditto\DittoPortable_64bit_3_24_214_0\Ditto\Themes\DarkerDitto.xml" />
+    <Resource Include="Resources\Tools\Program\Ditto\DittoPortable_64bit_3_24_214_0\Ditto\Themes\Nord.xml" />
+    <Resource Include="Resources\Tools\Program\Ditto\DittoPortable_64bit_3_24_214_0\Ditto\Themes\Terminal.xml" />
+    <Resource Include="Resources\Tools\Program\Process Hacker\processhacker-2.39-bin\CHANGELOG.txt" />
+    <Resource Include="Resources\Tools\Program\Process Hacker\processhacker-2.39-bin\COPYRIGHT.txt" />
+    <Resource Include="Resources\Tools\Program\Process Hacker\processhacker-2.39-bin\LICENSE.txt" />
+    <Resource Include="Resources\Tools\Program\Process Hacker\processhacker-2.39-bin\README.txt" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Licenses\BlobEmoji_license.txt" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Licenses\DirectShow_devices_license.txt" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Licenses\FFmpeg_license.txt" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Licenses\FluentFTP_license.txt" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Licenses\Icons_license.txt" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Licenses\ImageListView_license.txt" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Licenses\Json.NET_license.txt" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Licenses\MegaApiClient_license.txt" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Licenses\ShareX_license.txt" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Licenses\SSH.NET_license.txt" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Licenses\Steamworks.NET_license.txt" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Licenses\ZXing.Net_license.txt" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\ShareX\Logs\ShareX-Log-2022-05.txt" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\b1nzyblob.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\b1nzyblob2.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\b4nzyblob.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blob.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blob0w0.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blob3c.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blob3cevil.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobaffection.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobamused.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobangel.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobangery.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobangry.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobangry2.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobangrypuff.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobartist.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobaviator.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobawkward.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobaww.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobbandage.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobbanhammer.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobbathtub.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobblackcat.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobblush.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobboost.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobbored.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobbot.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobbowing.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobbroken.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobcamera.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobcat.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobcheeky.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobcheer.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobcheerful.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobcheerful2.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobclipboard.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobcmereyou.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobcocoa.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobcomfort.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobconcerned.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobconfounded.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobconfused.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobcool.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobcouncil.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobcouple.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobcowboy.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobcry.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobdancer.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobdead.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobderpy.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobderpyhappy.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobdetective.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobdevil.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobdevilsmile.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobdisapproval.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobdisguise.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobdizzy.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobdizzy2.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobdoctor.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobdoubt.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobdoubtful.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobdrool.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobeagle.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobembarrassed.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobembarrassed2.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobenjoy.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\bloberm.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobexpressionless.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobeyesdown.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobeyesup.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobfacemask.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobfacepalm.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobfearful.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobfingerguns.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobfingerscrossed.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobfirefighter.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobfistbumpL.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobfistbumpR.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobflushed.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobfreezing.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobfrog.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobfrown.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobfrowning.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobfrowningbig.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobgamer.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobgift.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobgiggle.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobglare.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobglarepolice.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobglassesdown.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobgo.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobgoat.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobgoodmorning.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobgoodmorningreverse.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobgoodnight.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobgoodnightreverse.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobgrimace.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobgrin.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobgrumpy.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobheart.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobhearteyes.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobhero.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobhighfive.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobhug.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobhug2.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobhuh.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobhushed.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobhyperthink.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobhyperthinkfast.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobhypesquad.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobidea.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobimfine.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobinlove.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobjam.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobjoy.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobkiss.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobkissblush.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobkissheart.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\bloblamp.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\bloblul.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobmail.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobmaracas.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobmelt.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobmeltblush.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobmeltsob.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobmeltsoblove.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobmindblown.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobmlem.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobmorning.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobmoustache.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobnauseated.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobnerd.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobnervous.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobnervous2.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobnervouspleading.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobneutral.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobnight.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobninja.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobnitro.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobno.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobnogood.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobnom.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobnomchocolate.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobnomchristmas.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobnomcookie.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobnomglobal1.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobnomglobal2.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobnomglobal3.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobnomouth.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobnook.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobnostar.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobnostar2.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobnwn.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobok.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobokhand.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobomo.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobonfire.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobono.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobooh.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\bloboohcry.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobopenmouth.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\bloboro.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\bloboutage.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\bloboverheated.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobovo.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobowo.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobowo2.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobowoevil.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobowosquint.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobpain.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobpainpats.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobpan.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobpanic.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobpanic2.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobpartlysunny.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobparty.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobpatrol.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobpats.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobpeek.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobpensive.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobpensivepray.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobpin.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobpirate.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobpleading.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobpolice.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobpoliceangery.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobpoll.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobpopcorn.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobpopsicle.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobpout.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobpout2.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobpray.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobpumpkin.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobrage.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobrageangry.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobreach.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobreachdrool.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobreachfront.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobreachfrown.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobreachreverse.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobreachsob.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobrelieved.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobrofl.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobrollingeyes.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobross.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobsad.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobsadpats.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobsadrain.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobsalute.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobsanta.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobscarf.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobscream.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobsecret.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobshh.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobshrug.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobsick.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobsip.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobsleeping.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobsleepless.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobslightsmile.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobsmile.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobsmilehappy.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobsmilehappyeyes.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobsmilesweat.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobsmilesweat2.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobsmiletear.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobsmiley.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobsmirk.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobsmirk2.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobsneezing.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobsnuggle.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobsob.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobsobglasses.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobspam.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobsplosion.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobspy.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobsquee.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobstare.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobstarstruck.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobstop.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobstudent.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobsunglasses.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobsurprised.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobsus.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobsweats.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobsweatsweary.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobteefs.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobthanks.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobthief.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobthinking.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobthinkingcool.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobthinkingdown.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobthinkingeyes.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobthinkingfast.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobthinkingglare.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobthinkingsmirk.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobthinksmart.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobthis.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobthonkang.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobthumbsdown.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobthumbsup.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobthump.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobtilt.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobtired.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobtongue.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobtonguewink.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobtorch.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobtrans.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobtriumph.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobtriumph2.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobugh.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobunamused.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobunsure.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobupset.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobupsidedown.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobuwu.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobvomiting.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobwaitwhat.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobwave.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobwavereverse.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobwavesob.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobweary.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobwhistle.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobwink.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobwitch.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobwizard.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobwoah.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobwoahopenmouth.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobwob.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobwooloo.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobwoozy.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobworker.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobworried.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobxd.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobyawn.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobyes.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobyikes.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobyum.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\blobzippermouth.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\bolb.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\doggoblob.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\feelsblobman.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\ferretblob.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\gentleblob.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\googlebear.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\googlebee.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\googlebird.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\googleblueheart.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\googlecake.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\googlecat.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\googlecatface.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\googlecatheart.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\googlechick.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\googlechicken.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\googlechristmastree.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\googlecow.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\googlecrab.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\googledog.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\googledove.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\googleduck.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\googleeagle.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\googlefire.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\googlefox.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\googleghost.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\googlegift.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\googlegoat.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\googlegun.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\googleicecream.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\googlekoala.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\googlelion.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\googlemouse.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\googlemuscleL.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\googlemuscleR.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\googleoctopus.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\googlepanda.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\googlepenguin.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\googlepig.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\googlepizza.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\googlerabbit.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\googlerat.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\googleredheart.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\googlescorpion.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\googlesheep.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\googlesnail.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\googlesnake.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\googlesquirrel.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\googleturtle.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\googlewhale.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\greentick.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\jakeblob.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\kirbyblob.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\nellyblob.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\nikoblob.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\notlikeblob.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\pandablob.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\photoblob.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\pikablob.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\pusheenblob.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\rainblob.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\redtick.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\reindeerblob.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\rickblob.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\superblob.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\thinkingwithblobs.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\wolfiriblob.png" />
+    <Resource Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\Stickers\BlobEmoji\wumpusblob.png" />
+    <Resource Include="Resources\Tools\Program\SpaceSniffer\spacesniffer_1_3_0_2\Disclaimer.txt" />
+    <Resource Include="Resources\Tools\Program\SpaceSniffer\spacesniffer_1_3_0_2\Release Notes.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\MainProgram\Icons\" />
+    <Folder Include="Resources\Tools\Program\Ditto\DittoPortable_64bit_3_24_214_0\Ditto\ClipCompare\" />
+    <Folder Include="Resources\Tools\Program\Ditto\DittoPortable_64bit_3_24_214_0\Ditto\DragFiles\" />
+    <Folder Include="Resources\Tools\Program\Ditto\DittoPortable_64bit_3_24_214_0\Ditto\Help\" />
+    <Folder Include="Resources\Tools\Program\Ditto\DittoPortable_64bit_3_24_214_0\Ditto\ReceivedFiles\" />
+    <Folder Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\ShareX\ImageEffects\" />
+    <Folder Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\ShareX\Screenshots\" />
+    <Folder Include="Resources\Tools\Program\ShareX\sharex-13.7.0-portable\ShareX\Tools\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Tools\Icons\Atom Material Icons.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Tools\Icons\Atom Material Icons.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Tools\Icons\AutoHotkey.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Tools\Icons\AutoHotkey.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Tools\Icons\Calibre.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Tools\Icons\Calibre.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Tools\Icons\default.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Tools\Icons\Ditto.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Tools\Icons\Ditto.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Tools\Icons\Free Download Manager.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Tools\Icons\Free Download Manager.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Tools\Icons\Gaaiho PDF Reader.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Tools\Icons\Gaaiho PDF Reader.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Tools\Icons\Joplin.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Tools\Icons\Joplin.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Tools\Icons\Listary.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Tools\Icons\Listary.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Tools\Icons\Material Theme UI.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Tools\Icons\Material Theme UI.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Tools\Icons\Motrix.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Tools\Icons\Motrix.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Tools\Icons\MSEdgeRedirect.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Tools\Icons\MSEdgeRedirect.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Tools\Icons\Office Tool Plus.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Tools\Icons\Office Tool Plus.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Tools\Icons\OpenArk.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Tools\Icons\OpenArk.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Tools\Icons\Process Hacker.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Tools\Icons\Process Hacker.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Tools\Icons\Rufus.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Tools\Icons\Rufus.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Tools\Icons\ScreenToGif.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Tools\Icons\ScreenToGif.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Tools\Icons\ShareX.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Tools\Icons\ShareX.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Tools\Icons\SpaceSniffer.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Tools\Icons\SpaceSniffer.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Tools\Icons\V2rayN.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Tools\Icons\V2rayN.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Tools\Icons\XMeters.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Tools\Icons\XMeters.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.115.5\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets" Condition="Exists('..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.115.5\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them. For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.115.5\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.115.5\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets'))" />
+    <Error Condition="!Exists('..\packages\ShowMeTheXAML.MSBuild.2.0.0\build\net472\ShowMeTheXAML.MSBuild.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\ShowMeTheXAML.MSBuild.2.0.0\build\net472\ShowMeTheXAML.MSBuild.targets'))" />
+    <Error Condition="!Exists('..\packages\MaterialDesignThemes.4.5.0\build\MaterialDesignThemes.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MaterialDesignThemes.4.5.0\build\MaterialDesignThemes.targets'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\ShowMeTheXAML.MSBuild.2.0.0\build\net472\ShowMeTheXAML.MSBuild.targets" Condition="Exists('..\packages\ShowMeTheXAML.MSBuild.2.0.0\build\net472\ShowMeTheXAML.MSBuild.targets')" />
+  <Import Project="..\packages\MaterialDesignThemes.4.5.0\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.4.5.0\build\MaterialDesignThemes.targets')" />
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <PropertyGroup>
+    <PostBuildEvent>XCOPY "$(SolutionDir)EfficientMachine\Resources\Tools\Program\" "$(TargetDir)Resources\Tools\Program\" /S /Y</PostBuildEvent>
+  </PropertyGroup>
+</Project>
