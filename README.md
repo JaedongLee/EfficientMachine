@@ -11,7 +11,7 @@ EfficientMachine 中大部分工具为便携式工具, 可以直接运行, 无�
 ![](https://i.imgur.com/xbLfqdj.png)
 
 ### 工具界面
-![](https://i.imgur.com/kx39nLp.png)
+![](https://i.imgur.com/gtOO45B.png)
 # 蓝图
 1. [x] 实现自动更新工具, 自动构建, 自动打包的流水线自动化
 1. [ ] 组合软件形成开发工具链
