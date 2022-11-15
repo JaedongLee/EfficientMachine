@@ -1,0 +1,8 @@
+./EfficientMachine.sln.DotSettings.user
+./EfficientMachine/EfficientMachine.csproj.user
+./EfficientMachine/EfficientMachine_TemporaryKey.pfx
+./packages
+./.vs
+./.idea
+./EfficientMachine/bin
+./EfficientMachine/obj
